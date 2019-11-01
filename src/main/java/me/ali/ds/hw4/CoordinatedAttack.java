@@ -51,7 +51,6 @@ public class CoordinatedAttack {
 					if(random.nextDouble() > failureProb)
 						p1.receive(p2.getStates(), p2.getKey());
 				}
-				p1.setRound(i+1);
 			}
 		}
 		

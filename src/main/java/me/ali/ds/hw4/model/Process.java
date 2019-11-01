@@ -3,16 +3,12 @@ package me.ali.ds.hw4.model;
 import java.util.Random;
 
 import lombok.Getter;
-import lombok.Setter;
 
 public abstract class Process {
 
-	private final int decisionRound;
 	private final int graphSize;
 	private final int index;
 	
-	@Setter
-	private int round;
 	@Getter
 	private Integer key;
 	@Getter
@@ -21,13 +17,11 @@ public abstract class Process {
 	public Process(int graphSize, int index, int decisionRound) {
 		this.graphSize = graphSize;
 		this.index = index;
-		this.round = 0;
 		this.states = new State[graphSize];
 		for (int i = 0; i < states.length; i++)
 			states[i] = (i == index) ? new State(opinion(), 0) : new State(null, -1);
 		
-		this.decisionRound = decisionRound;
-		if(index == 0 && round == 0)
+		if(index == 0)
 			this.key = new Random().nextInt(decisionRound) + 1;
 	}
 	
@@ -57,9 +51,6 @@ public abstract class Process {
 	}
 	
 	public boolean makeDecision() {
-		if(round != decisionRound)
-			throw new IllegalStateException();
-			
 		if(key == null || getLevel() <= key)
 			return false;
 		for (State state : states)
