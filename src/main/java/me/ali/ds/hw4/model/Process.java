@@ -61,7 +61,7 @@ public abstract class Process {
 	
 	@Override
 	public String toString() {
-		return key + " " + getLevel();
+		return "i=" + index + ", level=" + getLevel() + ", key=" + key;
 	}
 	
 	protected abstract boolean opinion();

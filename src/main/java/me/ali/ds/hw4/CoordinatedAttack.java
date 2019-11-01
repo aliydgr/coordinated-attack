@@ -14,7 +14,8 @@ public class CoordinatedAttack {
     
 	public static enum Status {
 		wrong_attack,//someone attack and someone don't
-		wrong_decision,//all agree but don't attack
+		wrong_agree,//all agree but not not attacking
+		wrong_opposite,//all opposite but attacking
 		right_agree,
 		right_opposite
 	}
@@ -65,11 +66,10 @@ public class CoordinatedAttack {
 		
 		//decision.size()=1
 		for (Boolean d : decision) {
-			if(!d.equals(expexted)) {
-				status = Status.wrong_decision;
-				return;
-			}
-			status = d ? Status.right_agree : Status.right_opposite;
+			if(!d.equals(expexted))
+				status = d ? Status.wrong_agree : Status.wrong_opposite;
+			else
+				status = d ? Status.right_agree : Status.right_opposite;
 		}
 	}
 	
