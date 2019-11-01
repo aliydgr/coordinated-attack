@@ -51,7 +51,7 @@ public abstract class Process {
 	}
 	
 	public boolean makeDecision() {
-		if(key == null || getLevel() <= key)
+		if(key == null || getLevel() < key)
 			return false;
 		for (State state : states)
 			if(Boolean.FALSE.equals(state.getValue()))
