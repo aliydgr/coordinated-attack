@@ -32,7 +32,7 @@ public class AppTest {
 		for (int j = 0; j < 100; j++) {
     		CoordinatedAttack ca = new CoordinatedAttack(random.nextInt(100) + 2, random.nextInt(100) + 5, 1);
 			ca.run(0);
-			assertNotEquals(Status.right_opposite, ca.getStatus());
+			assertEquals(Status.right_agree, ca.getStatus());
 		}
 	}
 }

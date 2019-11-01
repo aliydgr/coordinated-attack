@@ -22,7 +22,7 @@ public abstract class Process {
 			states[i] = (i == index) ? new State(opinion(), 0) : new State(null, -1);
 		
 		if(index == 0)
-			this.key = new Random().nextInt(decisionRound) + 1;
+			this.key = new Random().nextInt(decisionRound - 1) + 1;
 	}
 	
 	private int getLevel() {
