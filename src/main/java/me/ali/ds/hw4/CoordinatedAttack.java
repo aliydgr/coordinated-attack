@@ -49,7 +49,7 @@ public class CoordinatedAttack {
 					if(p1 == p2)
 						continue;
 					
-					if(random.nextDouble() > failureProb)
+					if(random.nextDouble() >= failureProb)
 						p1.receive(p2.getStates(), p2.getKey());
 				}
 			}
