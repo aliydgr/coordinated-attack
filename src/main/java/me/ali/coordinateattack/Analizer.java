@@ -1,4 +1,4 @@
-package me.ali.ds.hw4;
+package me.ali.coordinateattack;
 
 public class Analizer {
     

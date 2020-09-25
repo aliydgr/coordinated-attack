@@ -1,4 +1,4 @@
-package me.ali.ds.hw4.model;
+package me.ali.coordinateattack.model;
 
 public class OppositionProcess extends Process {
 

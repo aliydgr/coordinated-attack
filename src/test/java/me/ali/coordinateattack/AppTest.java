@@ -1,8 +1,9 @@
-package me.ali.ds.hw4;
+package me.ali.coordinateattack;
 
 import org.junit.Test;
 
-import me.ali.ds.hw4.CoordinatedAttack.Status;
+import me.ali.coordinateattack.CoordinatedAttack;
+import me.ali.coordinateattack.CoordinatedAttack.Status;
 
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package me.ali.ds.hw4;
+package me.ali.coordinateattack;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-import me.ali.ds.hw4.model.AgreeingProcess;
-import me.ali.ds.hw4.model.OppositionProcess;
-import me.ali.ds.hw4.model.Process;
+import me.ali.coordinateattack.model.AgreeingProcess;
+import me.ali.coordinateattack.model.OppositionProcess;
+import me.ali.coordinateattack.model.Process;
 
 public class CoordinatedAttack {
     
